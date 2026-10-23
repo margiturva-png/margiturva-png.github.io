@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Margit Urva — Portfolio</title>
+  <style>
+    :root { --ink: #2e2822; --muted: #8e8274; --bg: #fbf8f3; --line: #e5dccf; --accent: #4f6a43; --soft: #ebdfcf; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink);
+      background:
+        radial-gradient(40% 50% at 15% 20%, rgba(79, 106, 67, 0.18), transparent 70%),
+        radial-gradient(40% 50% at 85% 85%, rgba(201, 164, 106, 0.22), transparent 70%),
+        var(--bg);
+    }
+    .gate {
+      width: 100%; max-width: 380px; padding: 36px 32px; border-radius: 28px;
+      background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(24px) saturate(1.5); -webkit-backdrop-filter: blur(24px) saturate(1.5);
+      box-shadow: 0 24px 60px -24px rgba(46, 40, 34, 0.3);
+    }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+    h1 { font-size: 30px; font-weight: 400; letter-spacing: -0.01em; margin: 0 0 8px; }
+    p.hint { margin: 0 0 24px; color: var(--muted); font-size: 15px; line-height: 1.5; }
+    label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+    input {
+      width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 12px;
+      border: 1px solid var(--line); background: #fff; color: var(--ink);
+    }
+    input:focus { outline: 3px solid rgba(79, 106, 67, 0.35); border-color: var(--accent); }
+    button {
+      margin-top: 14px; width: 100%; font: inherit; font-size: 16px; font-weight: 500; padding: 13px;
+      border: 0; border-radius: 999px; background: var(--accent); color: #fff; cursor: pointer;
+    }
+    button[disabled] { opacity: 0.6; cursor: progress; }
+    .error { min-height: 20px; margin: 12px 0 0; font-size: 14px; color: #a2452f; }
+    .loading { color: var(--muted); font-size: 15px; }
+  </style>
+</head>
+<body>
+  <noscript>This portfolio needs JavaScript to open.</noscript>
+  <form class="gate" id="gate" hidden>
+    <p class="eyebrow">Portfolio</p>
+    <h1>Margit Urva</h1>
+    <p class="hint">This portfolio is private. Enter the password to continue.</p>
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" required autofocus>
+    <button type="submit">Enter</button>
+    <p class="error" id="err" role="alert"></p>
+  </form>
+  <p class="loading" id="loading">Loading…</p>
+
+  <script>
+  (async () => {
+    const KEY_STORE = "portfolio-key";
+    const gate = document.getElementById("gate");
+    const loading = document.getElementById("loading");
+    const err = document.getElementById("err");
+    const fromB64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+    const toB64 = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf)));
+
+    const meta = await (await fetch("m.json", { cache: "no-store" })).json();
+
+    async function decrypt(key, bytes) {
+      return crypto.subtle.decrypt({ name: "AES-GCM", iv: bytes.slice(0, 12) }, key, bytes.slice(12));
+    }
+    async function deriveKey(password) {
+      const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]);
+      return crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt: fromB64(meta.salt), iterations: meta.iterations, hash: "SHA-256" },
+        base, { name: "AES-GCM", length: 256 }, true, ["decrypt"]
+      );
+    }
+    async function openManifest(key) {
+      return JSON.parse(new TextDecoder().decode(await decrypt(key, fromB64(meta.data))));
+    }
+
+    // Remember the derived key (never the password) for this browser tab
+    async function storedKey() {
+      try {
+        const raw = sessionStorage.getItem(KEY_STORE);
+        return raw ? await crypto.subtle.importKey("raw", fromB64(raw), "AES-GCM", true, ["decrypt"]) : null;
+      } catch (e) { return null; }
+    }
+
+    async function render(key, manifest) {
+      const params = new URLSearchParams(location.search);
+      let page = (params.get("p") || "index.html").replace(/^\/+/, "");
+      if (!manifest[page]) page = "index.html";
+      const dir = page.includes("/") ? page.slice(0, page.lastIndexOf("/") + 1) : "";
+
+      const cache = new Map();
+      const fileBytes = async (path) => decrypt(key, new Uint8Array(await (await fetch("d/" + manifest[path].id)).arrayBuffer()));
+      const blobUrl = (path, fromDir) => {
+        if (cache.has(path)) return cache.get(path);
+        const p = (async () => {
+          let body = await fileBytes(path);
+          if (manifest[path].type === "text/css") {
+            // Point url(...) references inside the stylesheet at decrypted blobs too
+            let css = new TextDecoder().decode(body);
+            const cssDir = path.slice(0, path.lastIndexOf("/") + 1);
+            const refs = [...css.matchAll(/url\((['"]?)([^'")]+)\1\)/g)];
+            for (const [whole, , ref] of refs) {
+              const target = resolve(ref, cssDir);
+              if (target && manifest[target.path]) css = css.split(whole).join(`url("${await blobUrl(target.path)}")`);
+            }
+            body = new TextEncoder().encode(css);
+          }
+          return URL.createObjectURL(new Blob([body], { type: manifest[path].type }));
+        })();
+        cache.set(path, p);
+        return p;
+      };
+      function resolve(ref, fromDir) {
+        if (/^(https?:|mailto:|tel:|data:|blob:|javascript:|#)/i.test(ref)) return null;
+        const u = new URL(ref, "https://site.invalid/" + fromDir);
+        let path = decodeURIComponent(u.pathname.slice(1));
+        if (path === "" || path.endsWith("/")) path += "index.html";
+        return { path, hash: u.hash };
+      }
+
+      const html = new TextDecoder().decode(await fileBytes(page));
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const jobs = [];
+      for (const el of doc.querySelectorAll("[src], [href]")) {
+        const attr = el.hasAttribute("src") ? "src" : "href";
+        const target = resolve(el.getAttribute(attr), dir);
+        if (!target || !manifest[target.path]) continue;
+        if (target.path.endsWith(".html")) {
+          el.setAttribute(attr, "?p=" + encodeURIComponent(target.path).replace(/%2F/g, "/") + target.hash);
+        } else {
+          jobs.push(blobUrl(target.path, dir).then((url) => el.setAttribute(attr, url)));
+        }
+      }
+      await Promise.all(jobs);
+
+      const anchor = location.hash.slice(1);
+      document.open();
+      document.write("<!doctype html>\n" + doc.documentElement.outerHTML);
+      document.close();
+      if (anchor) setTimeout(() => document.getElementById(anchor)?.scrollIntoView(), 400);
+    }
+
+    let key = await storedKey();
+    if (key) {
+      try { return await render(key, await openManifest(key)); }
+      catch (e) { try { sessionStorage.removeItem(KEY_STORE); } catch (_) {} key = null; }
+    }
+
+    loading.hidden = true;
+    gate.hidden = false;
+    gate.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const button = gate.querySelector("button");
+      button.disabled = true; err.textContent = "";
+      try {
+        const k = await deriveKey(document.getElementById("pw").value);
+        const manifest = await openManifest(k);
+        try { sessionStorage.setItem(KEY_STORE, toB64(await crypto.subtle.exportKey("raw", k))); } catch (_) {}
+        gate.hidden = true; loading.hidden = false;
+        await render(k, manifest);
+      } catch (e2) {
+        err.textContent = "That password didn't work. Try again.";
+        button.disabled = false;
+        document.getElementById("pw").select();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
