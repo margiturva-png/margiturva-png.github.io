@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipedrive design system — Margit Urva</title>
+  <meta name="description" content="Case study: building and maintaining Pipedrive's web and mobile design systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261107a">
+  <script>try{var m=localStorage.getItem("reduce-motion");if(m==="1"||(m===null&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("reduce-motion")}catch(e){}</script>
+</head>
+<body class="theme-ds">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a href="../#work">Case studies</a>
+        <a href="../resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero">
+      <div class="container cs-hero__inner">
+        <div>
+          <span class="eyebrow reveal">Case study · Design system, components</span>
+          <h1 class="reveal reveal-delay-1">Pipedrive design system</h1>
+          <p class="cs-hero__sub reveal reveal-delay-2">Building and maintaining web app and mobile design systems for React, iOS and Android.</p>
+        </div>
+        <div class="cs-hero__visual" style="min-height:440px" aria-hidden="true">
+          <div class="theme-split" style="position:absolute;width:78%;left:0;top:0" data-speed="0.1">
+            <div class="light">
+              <div class="tok"><i style="background:#017737"></i>color.primary</div>
+              <div class="tok"><i style="background:#21232c"></i>color.text.default</div>
+              <div class="tok"><i style="background:#6f6e85"></i>color.text.secondary</div>
+              <div class="tok"><i style="background:#f4f5f8"></i>color.background</div>
+              <div class="tok"><i style="background:#e5484d"></i>color.negative</div>
+            </div>
+            <div class="dark">
+              <div class="tok"><i style="background:#2bb36a"></i>color.primary</div>
+              <div class="tok"><i style="background:#f4f5f8"></i>color.text.default</div>
+              <div class="tok"><i style="background:#a3a3b5"></i>color.text.secondary</div>
+              <div class="tok"><i style="background:#2a2d34"></i>color.background</div>
+              <div class="tok"><i style="background:#ff6b6f"></i>color.negative</div>
+            </div>
+          </div>
+          <div class="phone" style="position:absolute;right:0;top:70px;width:200px" data-speed="0.35">
+            <div class="phone__screen">
+              <div class="mock__bar" style="width:60%;height:14px;background:#21232c"></div>
+              <div class="mock__bar" style="width:90%"></div>
+              <div class="mock__row"><i style="background:#017737"></i><b></b></div>
+              <div class="mock__row"><i></i><b></b></div>
+              <div class="mock__row"><i></i><b></b></div>
+              <div style="position:absolute;right:16px;bottom:20px;width:48px;height:48px;border-radius:50%;background:#017737;box-shadow:var(--shadow-sm)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- Product -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">01</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Product</span>
+          <h2>A sales CRM, on every platform</h2>
+          <p>Pipedrive is a sales CRM for small and medium‑sized businesses. The main product is a web app, with a companion native mobile app. In the design system team, my specialism is mobile, and I also contribute to global assets and web app work.</p>
+          <p>The design team at Pipedrive is around 50 people. Together with developers, they're the design system's users.</p>
+          <p><a href="https://www.pipedrive.com/">pipedrive.com →</a></p>
+        </div>
+        <div class="stats reveal reveal-delay-1" style="--cols:2;margin-top:0">
+          <div class="stat"><strong>76.2k</strong><span>unique mobile users per month</span></div>
+          <div class="stat"><strong>~50</strong><span>designers using the system, plus developers</span></div>
+          <div class="stat"><strong>3</strong><span>platforms: React, iOS and Android</span></div>
+          <div class="stat"><strong>428</strong><span>icons in the new icon set</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="band" style="background:var(--soft)">
+      <div class="container">
+        <span class="eyebrow">Design system architecture</span>
+        <h2 style="font-size:clamp(40px,5.2vw,72px);font-weight:400;margin:14px 0 48px">How the pieces fit</h2>
+        <img class="reveal" src="../assets/img/design-system/ds-scheme.svg" alt="Design system architecture: tokens (light, dark, non-semantic colours), assets (icons, product illustrations), libraries (guidelines, patterns, components, templates, specs) and frameworks (navigation, detail, list and kanban views)" loading="lazy" style="width:100%;height:auto">
+      </div>
+    </section>
+
+    <!-- Tokens -->
+    <section class="chapter">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">02</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Tokens</span>
+          <h2>Everything starts with tokens</h2>
+          <p>The design system is built on tokens: base and semantic colours, non‑semantic colours, text styles and elevations, all of which are also available to designers in Figma. In code we also store size, spacing, radius, breakpoint and motion tokens.</p>
+          <p>For theming we adjust semantic colours and elevations.</p>
+          <p>I helped create the structure of base and semantic colours to support dark theming, and created the mobile semantic colours, text styles and elevations.</p>
+        </div>
+        <div aria-hidden="true">
+          <div class="swatches reveal" data-speed="0.06">
+            <i style="background:#0b3d20"></i><i style="background:#015a2a"></i><i style="background:#017737"></i><i style="background:#2bb36a"></i><i style="background:#8fd8ae"></i><i style="background:#e2f1e8"></i>
+            <i style="background:#14151b"></i><i style="background:#21232c"></i><i style="background:#4b4d5c"></i><i style="background:#8a8aa0"></i><i style="background:#c9cbd6"></i><i style="background:#f4f5f8"></i>
+            <i style="background:#7a1f22"></i><i style="background:#b3262b"></i><i style="background:#e5484d"></i><i style="background:#ff8f92"></i><i style="background:#ffd1d2"></i><i style="background:#fff0f0"></i>
+          </div>
+          <div class="cards" style="--cols:3;margin-top:24px" data-speed="0.16">
+            <div class="card" style="box-shadow:0 2px 6px rgba(0,0,0,.08)"><p style="margin:0">Elevation 1</p></div>
+            <div class="card" style="box-shadow:0 8px 20px rgba(0,0,0,.12)"><p style="margin:0">Elevation 2</p></div>
+            <div class="card" style="box-shadow:var(--shadow)"><p style="margin:0">Elevation 3</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assets -->
+    <section class="chapter chapter--accent">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">03</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">Assets</span>
+          <h2>A new icon set of 428 icons</h2>
+          <p>Our visual asset libraries are icons and illustrations, and I've mainly worked on iconography.</p>
+          <p>During a visual update, Pipedrive decided to create its own icon set for a unified visual language across the product. I led the project. We worked with a freelancer and reviewed their icons weekly, then finalised them with our internal team of a visual designer and an art director.</p>
+          <p>Along the way we reviewed symbols based on customer feedback, cleaned up the iconography structure and wrote guidelines for creating icons. The library keeps growing and is used across all product platforms.</p>
+        </div>
+        <div class="icon-grid reveal reveal-delay-1" data-speed="0.1" role="img" aria-label="A selection of icons from the Pipedrive icon set">
+          <span><svg viewBox="118.0 89.2 120 120" fill="currentColor" aria-hidden="true"><path d="M190.556 119.029C190.556 112.094 184.935 106.473 178 106.473C171.065 106.473 165.444 112.094 165.444 119.029V149.164C165.444 156.099 171.065 161.72 178 161.72C184.935 161.72 190.556 156.099 190.556 149.164V119.029ZM157.91 119.029C157.91 107.934 166.904 98.939 178 98.939C189.095 98.939 198.09 107.934 198.09 119.029V149.164C198.09 160.259 189.095 169.254 178 169.254C166.904 169.254 157.91 160.259 157.91 149.164V119.029ZM213.144 149.171C213.144 167.311 199.403 182.242 181.761 184.122V195.625C181.761 197.704 180.075 199.389 177.994 199.389C175.914 199.389 174.227 197.704 174.227 195.625V184.122C156.585 182.243 142.842 167.312 142.842 149.171V147.961C142.842 145.88 144.529 144.194 146.609 144.194C148.69 144.194 150.376 145.88 150.376 147.961V149.171C150.376 164.423 162.741 176.788 177.993 176.788C193.245 176.788 205.61 164.423 205.61 149.171V147.961C205.61 145.88 207.296 144.194 209.377 144.194C211.457 144.194 213.144 145.88 213.144 147.961V149.171Z"/></svg></span>
+          <span><svg viewBox="289.6 89.2 120 120" fill="currentColor" aria-hidden="true"><path d="M349.577 98.939C344.723 98.939 340.788 102.874 340.788 107.728L340.788 107.775C328.432 111.536 319.442 123.022 319.442 136.608L319.442 159.209L312.339 166.312C310.455 168.196 309.397 170.751 309.397 173.415V179.299C309.397 182.073 311.646 184.322 314.42 184.322H384.735C387.509 184.322 389.757 182.073 389.757 179.299V173.415C389.757 170.751 388.699 168.196 386.815 166.312L379.712 159.209V136.608C379.712 123.022 370.722 111.536 358.366 107.775L358.367 107.728C358.367 102.874 354.431 98.939 349.577 98.939ZM326.976 159.209L326.976 136.608C326.976 124.125 337.095 114.006 349.577 114.006C362.059 114.006 372.178 124.125 372.178 136.608V159.209C372.178 161.207 372.972 163.123 374.385 164.536L381.488 171.639C381.959 172.11 382.223 172.749 382.223 173.415V176.788H316.931V173.415C316.931 172.749 317.195 172.11 317.666 171.639L324.769 164.536C326.182 163.123 326.976 161.207 326.976 159.209ZM359.622 189.344C359.622 194.892 355.125 199.389 349.577 199.389C344.029 199.389 339.532 194.892 339.532 189.344H359.622Z"/></svg></span>
+          <span><svg viewBox="461.1 89.2 120 120" fill="currentColor" aria-hidden="true"><path d="M521.147 106.473C497.569 106.473 478.456 125.586 478.456 149.164C478.456 159.187 481.905 168.394 487.685 175.678C488.213 176.344 488.501 177.169 488.501 178.019V190.58L497.726 186.656C498.778 186.208 499.976 186.263 500.982 186.803C506.984 190.026 513.846 191.855 521.147 191.855C544.725 191.855 563.838 172.742 563.838 149.164C563.838 125.586 544.725 106.473 521.147 106.473ZM470.922 149.164C470.922 121.425 493.408 98.939 521.147 98.939C548.885 98.939 571.372 121.425 571.372 149.164C571.372 176.903 548.885 199.389 521.147 199.389C513.225 199.389 505.722 197.552 499.051 194.279L487.955 198.998C484.643 200.407 480.967 197.976 480.967 194.377V179.304C474.661 170.909 470.922 160.468 470.922 149.164ZM496.034 142.886C496.034 140.806 497.721 139.119 499.801 139.119H542.493C544.573 139.119 546.259 140.806 546.259 142.886C546.259 144.966 544.573 146.653 542.493 146.653H499.801C497.721 146.653 496.034 144.966 496.034 142.886ZM499.801 156.698H522.403C524.483 156.698 526.169 158.384 526.169 160.465C526.169 162.545 524.483 164.232 522.403 164.232H499.801C497.721 164.232 496.034 162.545 496.034 160.465C496.034 158.384 497.721 156.698 499.801 156.698Z"/></svg></span>
+          <span><svg viewBox="118.0 289.2 120 120" fill="currentColor" aria-hidden="true"><path d="M183.989 338.853C182.518 337.382 182.518 334.997 183.989 333.526C185.46 332.055 187.845 332.055 189.316 333.526L196.419 340.629C197.89 342.1 197.89 344.485 196.419 345.956C194.948 347.427 192.563 347.427 191.092 345.956L183.989 338.853Z"/><path d="M183.552 296.778C187.475 292.855 193.835 292.855 197.758 296.778L206.926 305.946C202.932 309.94 202.932 316.415 206.926 320.409C210.919 324.402 217.395 324.402 221.388 320.409L230.556 329.577C234.479 333.499 234.479 339.86 230.556 343.782L172.448 401.891C168.525 405.814 162.165 405.814 158.242 401.891L149.074 392.723C153.068 388.729 153.068 382.254 149.074 378.26C145.08 374.266 138.605 374.266 134.611 378.26L125.443 369.092C121.521 365.17 121.521 358.809 125.443 354.887L183.552 296.778ZM168.06 322.924L130.771 360.214C129.79 361.194 129.79 362.785 130.771 363.765L135.794 368.788C142.071 366.52 149.37 367.901 154.401 372.933C159.433 377.964 160.814 385.264 158.546 391.541L163.569 396.564C164.55 397.544 166.14 397.544 167.12 396.564L204.41 359.274L201.746 356.61C200.275 355.139 200.275 352.754 201.746 351.283C203.217 349.812 205.602 349.812 207.073 351.283L209.737 353.947L225.229 338.455C226.21 337.474 226.21 335.884 225.229 334.904L220.206 329.88C213.929 332.149 206.63 330.767 201.598 325.736C196.567 320.704 195.185 313.405 197.454 307.128L192.431 302.105C191.45 301.125 189.86 301.125 188.879 302.105L173.387 317.597L178.662 322.871C180.133 324.342 180.133 326.727 178.662 328.199C177.19 329.67 174.805 329.67 173.334 328.199L168.06 322.924Z"/></svg></span>
+          <span><svg viewBox="289.6 289.2 120 120" fill="currentColor" aria-hidden="true"><path d="M357.111 381.981C357.111 386.142 353.738 389.515 349.577 389.515C345.417 389.515 342.044 386.142 342.044 381.981C342.044 377.82 345.417 374.448 349.577 374.448C353.738 374.448 357.111 377.82 357.111 381.981Z"/><path d="M372.179 294.087C379.113 294.087 384.735 299.709 384.735 306.644V392.026C384.735 398.961 379.113 404.583 372.179 404.583H326.976C320.041 404.583 314.42 398.961 314.42 392.026V306.644C314.42 299.709 320.041 294.087 326.976 294.087H372.179ZM334.51 301.621H326.976C324.202 301.621 321.954 303.87 321.954 306.644V392.026C321.954 394.8 324.202 397.049 326.976 397.049H372.179C374.952 397.049 377.201 394.8 377.201 392.026V306.644C377.201 303.87 374.952 301.621 372.179 301.621H364.645V304.132C364.645 306.906 362.396 309.155 359.622 309.155H339.532C336.758 309.155 334.51 306.906 334.51 304.132V301.621Z"/></svg></span>
+          <span><svg viewBox="461.1 289.2 120 120" fill="currentColor" aria-hidden="true"><path d="M543.748 325.478C545.829 325.478 547.515 327.165 547.515 329.245L547.515 373.192C547.515 387.755 535.71 399.56 521.147 399.56C506.584 399.56 494.779 387.755 494.779 373.192L494.779 317.944C494.779 307.542 503.211 299.11 513.613 299.11C524.015 299.11 532.448 307.542 532.448 317.944V363.147C532.448 369.388 527.388 374.447 521.147 374.447C514.906 374.447 509.846 369.388 509.846 363.147V329.245C509.846 327.165 511.533 325.478 513.613 325.478C515.694 325.478 517.38 327.165 517.38 329.245V363.147C517.38 365.227 519.067 366.914 521.147 366.914C523.227 366.914 524.914 365.227 524.914 363.147V317.944C524.914 311.703 519.854 306.644 513.613 306.644C507.372 306.644 502.313 311.703 502.313 317.944L502.313 373.192C502.313 383.594 510.745 392.026 521.147 392.026C531.549 392.026 539.981 383.594 539.981 373.192L539.981 329.245C539.981 327.165 541.668 325.478 543.748 325.478Z"/></svg></span>
+          <span><svg viewBox="118.0 489.5 120 120" fill="currentColor" aria-hidden="true"><path d="M228.225 549.508C228.225 577.246 205.738 599.733 178 599.733C150.261 599.733 127.775 577.246 127.775 549.508C127.775 521.769 150.261 499.283 178 499.283C205.738 499.283 228.225 521.769 228.225 549.508ZM220.691 549.508C220.691 525.93 201.578 506.816 178 506.816C154.422 506.816 135.309 525.93 135.309 549.508C135.309 573.086 154.422 592.199 178 592.199C201.578 592.199 220.691 573.086 220.691 549.508ZM158.343 562.063C156.955 560.513 154.574 560.381 153.024 561.768C151.474 563.156 151.342 565.537 152.729 567.087C158.931 574.017 167.957 578.387 177.998 578.387C188.039 578.387 197.064 574.017 203.266 567.087C204.654 565.537 204.522 563.156 202.972 561.768C201.421 560.381 199.04 560.513 197.653 562.063C192.819 567.464 185.807 570.853 177.998 570.853C170.189 570.853 163.176 567.464 158.343 562.063ZM166.699 536.942C166.699 540.409 163.888 543.22 160.421 543.22C156.954 543.22 154.143 540.409 154.143 536.942C154.143 533.474 156.954 530.664 160.421 530.664C163.888 530.664 166.699 533.474 166.699 536.942ZM195.579 543.22C199.046 543.22 201.857 540.409 201.857 536.942C201.857 533.474 199.046 530.664 195.579 530.664C192.111 530.664 189.3 533.474 189.3 536.942C189.3 540.409 192.111 543.22 195.579 543.22Z"/></svg></span>
+          <span><svg viewBox="289.6 489.5 120 120" fill="currentColor" aria-hidden="true"><path d="M392.268 511.839V521.884H306.886L306.886 511.839H392.268ZM306.886 504.305C302.725 504.305 299.352 507.678 299.352 511.839V521.884C299.352 525.164 301.448 527.955 304.375 528.989V584.665C304.375 590.213 308.872 594.71 314.42 594.71H384.735C390.282 594.71 394.78 590.213 394.78 584.665V528.989C397.706 527.955 399.802 525.164 399.802 521.884V511.839C399.802 507.678 396.429 504.305 392.268 504.305H306.886ZM311.908 584.665V529.418H387.246V584.665C387.246 586.052 386.122 587.177 384.735 587.177H314.42C313.033 587.177 311.908 586.052 311.908 584.665ZM338.276 554.53C336.196 554.53 334.51 556.217 334.51 558.297C334.51 560.378 336.196 562.064 338.276 562.064H360.878C362.958 562.064 364.645 560.378 364.645 558.297C364.645 556.217 362.958 554.53 360.878 554.53H338.276Z"/></svg></span>
+          <span><svg viewBox="461.1 489.5 120 120" fill="currentColor" aria-hidden="true"><path d="M548.771 541.974C548.771 522.557 533.03 506.816 513.613 506.816C494.196 506.816 478.456 522.557 478.456 541.974C478.456 561.391 494.196 577.132 513.613 577.132C533.03 577.132 548.771 561.391 548.771 541.974ZM541.021 574.707C533.605 580.923 524.046 584.665 513.613 584.665C490.035 584.665 470.922 565.552 470.922 541.974C470.922 518.396 490.035 499.283 513.613 499.283C537.191 499.283 556.304 518.396 556.304 541.974C556.304 552.406 552.563 561.965 546.348 569.38L570.27 593.302C571.741 594.773 571.741 597.158 570.27 598.63C568.799 600.101 566.414 600.101 564.943 598.63L541.021 574.707Z"/></svg></span>
+          <span><svg viewBox="118.0 689.7 120 120" fill="currentColor" aria-hidden="true"><path d="M203.066 742.123C212.769 742.123 220.634 734.256 220.634 724.552C220.634 714.848 212.769 706.982 203.066 706.982C193.364 706.982 185.498 714.848 185.498 724.552C185.498 734.256 193.364 742.123 203.066 742.123ZM182.856 739.438C179.785 735.273 177.969 730.125 177.969 724.552C177.969 710.69 189.205 699.452 203.066 699.452C216.927 699.452 228.164 710.69 228.164 724.552C228.164 738.415 216.927 749.653 203.066 749.653C197.493 749.653 192.345 747.836 188.18 744.763L134.151 798.799C132.681 800.269 130.297 800.269 128.827 798.799C127.357 797.329 127.357 794.945 128.827 793.474L136.761 785.539L128.816 777.593C127.346 776.123 127.346 773.739 128.816 772.268C130.286 770.798 132.67 770.798 134.14 772.268L142.085 780.215L147.666 774.633L134.051 761.017C132.581 759.546 132.581 757.162 134.051 755.692C135.521 754.222 137.905 754.222 139.375 755.692L152.99 769.308L182.856 739.438Z"/></svg></span>
+          <span><svg viewBox="289.6 689.7 120 120" fill="currentColor" aria-hidden="true"><path d="M342.043 694.429C340.656 694.429 339.532 695.554 339.532 696.94V701.963C339.532 703.35 340.656 704.474 342.043 704.474H357.111C358.498 704.474 359.622 703.35 359.622 701.963V696.94C359.622 695.554 358.498 694.429 357.111 694.429H342.043ZM349.533 729.766C351.613 729.766 353.3 731.452 353.3 733.533V753.111L368.535 768.346C370.007 769.817 370.007 772.202 368.535 773.673C367.064 775.144 364.679 775.144 363.208 773.673L347.164 757.629C346.269 756.734 345.766 755.52 345.766 754.255V733.533C345.766 731.452 347.453 729.766 349.533 729.766ZM383.885 725.266C375.595 715.612 363.3 709.497 349.577 709.497C324.612 709.497 304.375 729.735 304.375 754.699C304.375 779.664 324.612 799.902 349.577 799.902C374.542 799.902 394.78 779.664 394.78 754.699C394.78 747.096 392.902 739.93 389.586 733.642L395.839 728.061C396.874 727.138 396.964 725.55 396.041 724.516L392.697 720.768C391.773 719.734 390.186 719.643 389.151 720.567L383.885 725.266ZM311.908 754.699C311.908 733.895 328.773 717.03 349.577 717.03C370.381 717.03 387.246 733.895 387.246 754.699C387.246 775.503 370.381 792.368 349.577 792.368C328.773 792.368 311.908 775.503 311.908 754.699Z"/></svg></span>
+          <span><svg viewBox="461.1 689.7 120 120" fill="currentColor" aria-hidden="true"><path d="M495.915 708.55C490.351 705.34 483.237 707.245 480.024 712.804C476.812 718.362 478.718 725.47 484.282 728.679L493.713 734.119C499.277 737.329 506.391 735.424 509.604 729.865C512.816 724.307 510.91 717.199 505.346 713.989L495.915 708.55ZM473.494 709.037C478.788 699.875 490.515 696.735 499.685 702.025L509.116 707.465C518.287 712.755 521.429 724.47 516.134 733.632C513.938 737.432 510.635 740.196 506.867 741.753L569.483 777.816C571.287 778.855 571.906 781.159 570.866 782.961C569.826 784.763 567.521 785.382 565.717 784.343L513.078 754.025L506.869 757.601C510.637 759.158 513.939 761.922 516.135 765.722C521.43 774.884 518.288 786.599 509.117 791.889L499.687 797.329C490.516 802.619 478.79 799.479 473.495 790.317C468.2 781.155 471.343 769.44 480.513 764.15L489.326 759.067C489.483 758.939 489.652 758.822 489.833 758.717L505.529 749.677L489.832 740.637C489.651 740.533 489.481 740.415 489.324 740.287L480.512 735.204C471.341 729.914 468.199 718.199 473.494 709.037ZM505.347 785.365C510.911 782.155 512.817 775.047 509.605 769.489C506.393 763.93 499.278 762.025 493.714 765.235L484.283 770.675C478.72 773.884 476.813 780.992 480.026 786.551C483.238 792.109 490.352 794.014 495.916 790.804L505.347 785.365ZM570.867 716.393C569.827 714.591 567.522 713.972 565.718 715.011L520.519 741.044L528.068 745.392L569.484 721.538C571.288 720.499 571.907 718.196 570.867 716.393Z"/></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Libraries -->
+    <section class="chapter">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">04</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Libraries</span>
+          <h2>Guidelines, components, patterns, templates and specs</h2>
+          <p>I've created mobile guidelines, components, patterns and specs, and contributed to the web app libraries.</p>
+          <p>Mobile guidelines cover accessibility, offline mode, responsiveness and dark mode. Patterns include navigation, error handling, offline handling, onboarding, loading, empty states and more.</p>
+          <p>To make documentation consistent, I created the structure for component guidelines, along with the design system architecture scheme, a design system glossary and the Figma file structure.</p>
+        </div>
+        <div data-speed="0.1" style="max-width:600px;margin:0 auto;width:100%">
+          <img class="reveal reveal-delay-1" src="../assets/img/design-system/component-template.svg" alt="Component guideline template with status tags, Storybook and Figma links, and sections for anatomy, behaviour, specifications, usage and content guidelines" loading="lazy" style="width:100%">
+        </div>
+      </div>
+    </section>
+
+    <!-- Frameworks -->
+    <section class="chapter chapter--soft">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">05</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">Frameworks</span>
+          <h2>Reusable layouts made of components</h2>
+          <p>Frameworks are the reusable layouts in the product, usually made up of several components.</p>
+          <p>I've worked on the web app navigation framework, writing guidelines on how to structure the information architecture in navigation and rules for changing the default setup. Every framework includes specs for designers. The navigation framework includes components and responsiveness guidance so they can be reused across product areas.</p>
+        </div>
+        <div data-speed="0.1" aria-hidden="true">
+          <div class="mock reveal" style="min-height:360px">
+            <div class="mock__rail"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="mock__body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-content:start">
+              <div style="grid-column:span 4" class="mock__bar"></div>
+              <div style="background:var(--soft);border-radius:8px;padding:8px;min-height:220px"><div class="mock__row" style="background:#fff"><b></b></div><div class="mock__row" style="background:#fff"><b></b></div></div>
+              <div style="background:var(--soft);border-radius:8px;padding:8px"><div class="mock__row" style="background:#fff"><b></b></div></div>
+              <div style="background:var(--soft);border-radius:8px;padding:8px"><div class="mock__row" style="background:#fff"><b></b></div><div class="mock__row" style="background:#fff"><b></b></div><div class="mock__row" style="background:#fff"><b></b></div></div>
+              <div style="background:var(--soft);border-radius:8px;padding:8px"><div class="mock__row" style="background:#fff"><b></b></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessibility -->
+    <section class="chapter">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">06</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Accessibility</span>
+          <h2>Aiming for WCAG 2.1 AA</h2>
+          <p>Pipedrive aims to comply with the WCAG 2.1 AA standard. To support this, I created accessibility acceptance criteria for the design system that set the standard for creating or updating components.</p>
+          <p>I also ran a project with two designers and an engineer to audit our component library against the AA level. Based on the audit, we made improvements in both design and code.</p>
+          <p>Our component guidelines include an accessibility section, and we have accessibility guidelines for both mobile and web.</p>
+        </div>
+        <div class="cards" style="--cols:1;margin-top:0">
+          <div class="card reveal" data-speed="0.04"><span style="font-size:40px">⌨️</span><h3 style="margin-top:12px">User can navigate using only a keyboard</h3></div>
+          <div class="card reveal reveal-delay-1" data-speed="0.1"><span style="font-size:40px">🌞</span><h3 style="margin-top:12px">Content can be consumed in various conditions</h3></div>
+          <div class="card reveal reveal-delay-2" data-speed="0.16"><span style="font-size:40px">🔍</span><h3 style="margin-top:12px">Design is usable when zoomed in</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maintenance / Advocacy -->
+    <section class="chapter chapter--dark">
+      <span class="ghost" data-speed="-0.2" aria-hidden="true" style="color:#fff">07</span>
+      <div class="container split" style="align-items:start">
+        <div class="reveal">
+          <span class="eyebrow">Maintenance</span>
+          <h2>A system that keeps evolving</h2>
+          <p class="muted">The design library is revised continuously based on feedback from Pipedrive users and designers, usability testing findings, business requirements, collaboration with the web app design system team, and updates to design tools.</p>
+          <p class="muted">We also support inner sourcing, so product teams can contribute to the design system.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Advocacy</span>
+          <h2>Adoption is part of the work</h2>
+          <p class="muted">When building a design system, it's also important to plan how it will be adopted. Besides consulting designers on components, patterns and guidelines, we onboard designers through workshops and presentations. We communicate and document updates and releases, and run quarterly pulse surveys.</p>
+          <p class="muted">As a design system designer I took part in weekly design reviews with product designers and created several workshops and presentations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container next__row">
+        <a class="btn btn--ghost next__back" href="../#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back to portfolio
+        </a>
+        <a class="next__link" href="xolo.html">
+          <span class="eyebrow">Next case study</span>
+          <h2>Xolo mobile app</h2>
+          <span class="btn next__cta">Read next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="../assets/js/main.js?v=20261107a"></script>
+</body>
+</html>

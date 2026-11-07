@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customisable navigation — Margit Urva</title>
+  <meta name="description" content="Case study: restructuring Pipedrive's navigation and letting users customise it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261107a">
+  <script>try{var m=localStorage.getItem("reduce-motion");if(m==="1"||(m===null&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("reduce-motion")}catch(e){}</script>
+</head>
+<body class="theme-nav">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a href="../#work">Case studies</a>
+        <a href="../resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero cs-hero--wide-visual">
+      <span class="shape" style="width:260px;height:260px;border-radius:64px;background:var(--shape);left:-80px;bottom:8%" data-speed="0.3" data-rotate="-14" aria-hidden="true"></span>
+      <span class="shape" style="width:90px;height:90px;border-radius:50%;background:var(--accent);right:8%;top:16%;opacity:.9" data-speed="0.6" aria-hidden="true"></span>
+      <div class="container cs-hero__inner">
+        <div>
+          <span class="eyebrow reveal">Case study · Product design</span>
+          <h1 class="reveal reveal-delay-1">Pipedrive customisable navigation</h1>
+          <p class="cs-hero__sub reveal reveal-delay-2">Restructuring the CRM navigation for a better experience and feature discovery, and letting users customise it.</p>
+        </div>
+        <div class="cs-hero__visual">
+          <div data-speed="0.12"><img class="reveal" src="../assets/img/navigation/interface.webp" alt="Interface preferences page where users reorder menu items, with the restructured avatar menu" style="box-shadow:none; border-radius:0"></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- Problem -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">01</span>
+      <div class="container split">
+        <div>
+          <div class="reveal">
+            <span class="eyebrow">User problem</span>
+            <p class="lead" style="margin-top:16px">As the product grew and added new features, the main menu grew too, with many new icons. More and more users asked to remove items they don't use daily.</p>
+          </div>
+          <div class="reveal" style="margin-top:56px">
+            <span class="eyebrow">Business problem</span>
+            <p class="lead" style="margin-top:16px">The menu could no longer scale and there was no clear logic to the information architecture. Some features had multiple entry points, and the teams behind them competed for navigation placement to increase traction.</p>
+          </div>
+        </div>
+        <div style="position:relative;min-height:420px" aria-label="Customer feedback">
+          <p class="eyebrow" style="color:var(--muted)">Customer feedback</p>
+          <div class="card reveal" style="position:absolute;top:40px;right:0;width:88%;box-shadow:var(--shadow)" data-speed="0.08">
+            <p>“User would like to edit the main sidebar menu: we would be able to adjust the positioning of the tools to place tools we find most important at the top etc.”</p>
+          </div>
+          <div class="card reveal reveal-delay-1" style="position:absolute;top:210px;left:0;width:80%;box-shadow:var(--shadow)" data-speed="0.2">
+            <p>“User wants to be able to remove items from the left menu.”</p>
+          </div>
+          <div class="card reveal reveal-delay-2" style="position:absolute;top:320px;right:4%;width:82%;box-shadow:var(--shadow)" data-speed="0.32">
+            <p>“User would like to be able to hide or remove items from the left sidebar menu.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Validation -->
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">02</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Problem validation</span>
+          <h2>Customisation, or better architecture?</h2>
+          <p>Customers clearly wanted to customise the menu, but we wanted to make sure the underlying problem wasn't poor information architecture that could be solved by restructuring the navigation.</p>
+          <p>We knew the current setup's information architecture was weak, so we aimed to improve the default setup and also let users customise the menu.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Supporting data</span>
+          <div class="stats" style="--cols:2;margin-top:24px">
+            <div class="stat"><strong>18<span class="pct">%</span></strong><span>of users click shortcut keys each week, but only 1% add something</span></div>
+            <div class="stat"><strong>50<span class="pct">%</span></strong><span>of users who open the avatar menu go straight to “log out”</span></div>
+          </div>
+          <ul class="ticks" style="margin-top:40px">
+            <li>Some pages in navigation are visited very often, others not at all</li>
+            <li>Admin users behave differently from regular users</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interviews -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">03</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">User interviews</span>
+          <h2>How people actually look for things</h2>
+          <p>To learn more about how navigation was used, we interviewed users. Among other things, we found that:</p>
+          <ul class="ticks">
+            <li>Information is searched for first in the main menu, then the three‑dot menu, then the avatar menu</li>
+            <li>Users don't understand the difference between the three‑dot and avatar menus</li>
+            <li>Some pages are hard to find</li>
+            <li>Participants at 100% zoom couldn't see the entire navigation</li>
+          </ul>
+        </div>
+        <div data-speed="0.12">
+          <img class="reveal" src="../assets/img/navigation/menus.webp" alt="Pipedrive layout showing where the main menu, three-dot menu and avatar menu sit" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Card sorting -->
+    <section class="band">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Card sorting</span>
+          <h2 style="font-size:clamp(40px,5.2vw,72px);font-weight:400;margin:14px 0 28px">A new information architecture</h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p>Using what we'd learned from research, we mapped the current navigation, identified duplicate entry points and created a new information architecture.</p>
+          <p>This produced these sections: primary menu, three‑dot menu, quick help, avatar menu, four‑item menu, settings, and tools and apps.</p>
+        </div>
+      </div>
+      <div class="container" style="margin-top:56px">
+        <figure class="card-sort reveal" data-speed="0.06">
+          <img src="../assets/img/navigation/card-sorting.webp" alt="Card sort of the current navigation: items grouped under Primary menu, Three dots, Quick help, Avatar menu, Four item menu, Settings and Tools and apps, with duplicated entry points marked red" loading="lazy">
+          <figcaption class="card-sort__legend"><span class="card-sort__swatch" aria-hidden="true"></span>Duplicate</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Iterations -->
+    <section class="chapter">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">04</span>
+      <div class="container">
+        <span class="eyebrow reveal">Iterations</span>
+        <h2 class="reveal">Three rounds of usability testing</h2>
+        <div class="cards" style="--cols:3">
+          <div class="card reveal" data-speed="0.04"><span class="stat"><strong>1</strong></span><p style="margin-top:20px">The first round was internal, with two versions to validate the new default structure. Both prototypes used a new suite‑based logic that focused more on solving the business problem.</p></div>
+          <div class="card reveal reveal-delay-1" data-speed="0.1"><span class="stat"><strong>2</strong></span><p style="margin-top:20px">The second round was external. We tested the stronger version from round one against a new version that wasn't built around product suites and gave users more flexibility. This round also introduced customisation.</p></div>
+          <div class="card reveal reveal-delay-2" data-speed="0.16"><span class="stat"><strong>3</strong></span><p style="margin-top:20px">In the final round we settled the default menu on non‑suite logic, since it had performed better. We tested two versions of customisation with users and chose the first.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Findings -->
+    <section class="chapter chapter--soft">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">05</span>
+      <div class="container split split--wide-visual">
+        <div class="reveal">
+          <span class="eyebrow">Usability testing findings</span>
+          <h2>Users wanted control and flexibility</h2>
+          <p>One hypothesis we tested was introducing suites, which separate the product by the jobs users want to get done. It solved our business problem, but users wanted more control and flexibility.</p>
+          <p>Of the two customisation versions we showed, users found a dedicated page easier to understand than customising directly in the navigation. We called it <strong>Interface preferences</strong> and added controls such as choosing a landing page and turning off keyboard shortcuts.</p>
+        </div>
+        <div data-speed="0.08">
+          <img class="reveal" src="../assets/img/navigation/usability-findings.svg" alt="Interface preferences page for customising the navigation, from usability testing" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Release -->
+    <section class="chapter">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">06</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Release version</span>
+          <h2>Change where it helps, stability where it matters</h2>
+          <p>For the final release, the default main menu kept all current menu items (up to 10) to avoid change aversion. Most of the entry‑point reshuffling happened in the “more” menu, avatar menu, settings, and tools and apps pages.</p>
+          <p>On the Interface preferences page, users could hide and move items in the main and “more” menus.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Guidelines</span>
+          <p style="margin-top:16px">To avoid future navigation architecture issues, we documented a navigation framework for other teams to follow.</p>
+          <div class="callout">Main menu items must be <strong>product suites or daily tools</strong>. A tool counts as daily when at least <strong>20%</strong> of weekly active users use it. With this metric we can monitor navigation and make decisions about changes.</div>
+          <p style="margin-top:24px">The avatar menu was restructured to follow the three sections documented in the guidelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="chapter chapter--dark">
+      <span class="ghost" data-speed="-0.2" aria-hidden="true" style="color:#fff">07</span>
+      <div class="container">
+        <span class="eyebrow reveal">Challenges</span>
+        <h2 class="reveal">What changing navigation touches</h2>
+        <div class="cards" style="--cols:2">
+          <div class="card reveal"><h3>Risk mitigation</h3><p>Product teams worried that moving entry points would hurt their feature discovery. We created a risk mitigation plan in case the changes backfired.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>Saving patterns</h3><p>The project highlighted the different saving patterns across product pages. Customisation needed manual saving, while some other settings pages use autosave.</p></div>
+          <div class="card reveal"><h3>System visibility</h3><p>Customer‑facing teams worried about troubleshooting without knowing a user's navigation setup. We built a back‑office view of each user's setup.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>IA changes affecting UI</h3><p>Because we removed a submenu layer, product teams had to review how containers were structured in their pages to make sure the layout scaled with the new navigation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcome -->
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">08</span>
+      <div class="container">
+        <span class="eyebrow reveal">Outcome</span>
+        <h2 class="reveal">Highly anticipated, and it works</h2>
+        <div class="stats reveal">
+          <div class="stat"><strong>42k</strong><span>unique visits to the customisation settings page within 3 months</span></div>
+          <div class="stat"><strong>22<span class="pct">%</span></strong><span>of users visited, for a feature that's neither required nor daily</span></div>
+          <div class="stat"><strong>34.5<span class="pct">%</span></strong><span>conversion after the release</span></div>
+          <div class="stat"><strong>75<span class="pct">%</span></strong><span>customer satisfaction</span></div>
+        </div>
+        <p class="reveal" style="max-width:62ch;margin-top:56px">Users said the feature was long awaited and worked well. They also asked for more items to be customisable, which we had anticipated and used as input for future improvements.</p>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">09</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">Analytics</span>
+          <h2>Measuring navigation over time</h2>
+          <p>We closely monitor daily tools. We also track:</p>
+          <ul class="ticks">
+            <li>the most popular landing page choices</li>
+            <li>the most popular pages added to the main menu</li>
+            <li>the most hidden pages</li>
+          </ul>
+          <p style="margin-top:24px">These metrics inform design decisions about both navigation and user behaviour.</p>
+        </div>
+        <div class="bars-wrap" aria-hidden="true">
+          <div class="bars">
+            <div style="height:95%"><span>Deals</span></div>
+            <div style="height:72%"><span>Activities</span></div>
+            <div style="height:55%"><span>Email</span></div>
+            <div style="height:44%"><span>Leads</span></div>
+            <div style="height:30%"><span>Contacts</span></div>
+            <div style="height:18%"><span>Insights</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container next__row">
+        <a class="btn btn--ghost next__back" href="../#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back to portfolio
+        </a>
+        <a class="next__link" href="design-system.html">
+          <span class="eyebrow">Next case study</span>
+          <h2>Pipedrive design system</h2>
+          <span class="btn next__cta">Read next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="../assets/js/main.js?v=20261107a"></script>
+</body>
+</html>

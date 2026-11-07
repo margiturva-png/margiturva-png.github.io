@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic Onboarding — Margit Urva</title>
+  <meta name="description" content="Case study: showing the value of Pipedrive before asking for a signup, with an AI Setup Agent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261107a">
+  <script>try{var m=localStorage.getItem("reduce-motion");if(m==="1"||(m===null&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("reduce-motion")}catch(e){}</script>
+</head>
+<body class="theme-agentic">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a href="../#work">Case studies</a>
+        <a href="../resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="cs-hero">
+      <span class="blob" style="width:520px;height:520px;background:var(--glow-a);left:-120px;top:-80px" data-speed="0.25" aria-hidden="true"></span>
+      <span class="blob" style="width:420px;height:420px;background:var(--glow-b);right:-80px;bottom:-120px;opacity:.35" data-speed="-0.2" aria-hidden="true"></span>
+      <div class="container cs-hero__inner">
+        <div>
+          <span class="eyebrow reveal">Product design case study</span>
+          <h1 class="reveal reveal-delay-1">Agentic Onboarding</h1>
+          <p class="cs-hero__sub reveal reveal-delay-2">Showing value before asking for a signup.</p>
+        </div>
+        <div class="cs-hero__visual">
+          <div data-speed="0.12"><img class="reveal" src="../assets/img/agentic/setup-agent-cover.webp" alt="Setup agent entry screen: Let's set up your pipeline"></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
+
+    <div class="container">
+      <dl class="facts reveal">
+        <div><dt>Experiment</dt><dd>Agentic Onboarding A/B test</dd></div>
+        <div><dt>Primary metric</dt><dd>Trial‑to‑paid (T2P) conversion</dd></div>
+        <div><dt>My role</dt><dd>Drafted the end‑to‑end experience</dd></div>
+        <div><dt>Status</dt><dd>First run complete; re‑runs planned for October 2026</dd></div>
+      </dl>
+    </div>
+
+    <!-- Overview -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">01</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Overview</span>
+          <h2>A CRM that proves itself before it asks for your email</h2>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <p class="lead">Pipedrive normally asks people to sign up before they see the product. Agentic Onboarding flips that.</p>
+          <p>Our new Setup Agent turns a company name or domain into a working sales pipeline in minutes and lets the person try it on sample data. Only then does it ask them to create an account to keep it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="chapter chapter--soft">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">02</span>
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <span class="eyebrow">The problem</span>
+            <h2>We asked for the relationship before the value</h2>
+            <p>In the live product, signup comes first, before someone has done anything in a CRM. Only after creating an account do they land in the product itself, where popups and an optional setup guide try to explain what to do next.</p>
+          </div>
+          <ul class="ticks reveal reveal-delay-1">
+            <li>New users commit an email and password before they know if this CRM fits how they sell</li>
+            <li>Understanding of core concepts (deals, pipeline, stages) is deferred until after signup</li>
+            <li>Guidance relies on popups layered onto a real, sometimes empty, product</li>
+          </ul>
+        </div>
+        <p class="eyebrow" style="margin-top:72px;color:var(--muted)">Before: the live flow</p>
+        <ol class="flow flow--muted" style="--cols:4;margin-top:16px;padding:0">
+          <li class="reveal"><strong>Sign up</strong><span>Email and password</span></li>
+          <li class="reveal reveal-delay-1"><strong>Land in an empty product</strong><span>Nothing to react to yet</span></li>
+          <li class="reveal reveal-delay-2"><strong>Popups explain the UI</strong><span>Guidance layered on top</span></li>
+          <li class="reveal reveal-delay-3"><strong>Optional setup guide</strong><span>A separate page to find</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Before / after -->
+    <section class="band">
+      <div class="container">
+        <span class="eyebrow">Before / after</span>
+        <h2 style="font-size:clamp(40px,5.2vw,72px);font-weight:400;margin:14px 0 0">Where the value moment moved</h2>
+        <div class="band__stage" style="margin-top:56px;min-height:720px">
+          <div style="position:absolute;width:44%;left:0;top:0" class="frame" data-speed="0.05">
+            <img src="../assets/img/agentic/before.jpg" alt="Before: the live pipedrive.com signup form asking for a work email" loading="lazy">
+          </div>
+          <svg class="hand-arrow reveal" viewBox="0 0 240 170" fill="none" aria-hidden="true" style="position:absolute;left:39%;top:6px;width:23%" data-speed="0.15">
+            <defs>
+              <mask id="arrow-line-mask" maskUnits="userSpaceOnUse"><path class="hand-arrow__draw" d="M14.0 58.0 L16.5 54.7 L19.1 51.5 L21.9 48.4 L24.8 45.4 L27.8 42.5 L31.0 39.7 L34.3 37.1 L37.8 34.5 L41.4 32.1 L45.0 29.8 L48.8 27.7 L52.8 25.7 L56.8 23.8 L60.9 22.1 L65.1 20.6 L69.4 19.1 L73.9 17.9 L78.4 16.8 L82.9 15.9 L87.6 15.1 L92.3 14.5 L97.2 14.1 L102.0 13.9 L107.0 13.9 L112.0 14.0 L117.5 14.4 L122.9 14.9 L128.2 15.7 L133.4 16.8 L138.5 18.0 L143.5 19.5 L148.4 21.2 L153.1 23.1 L157.7 25.2 L162.2 27.5 L166.5 30.1 L170.7 32.8 L174.7 35.7 L178.6 38.9 L182.3 42.2 L185.8 45.8 L189.1 49.5 L192.2 53.4 L195.1 57.5 L197.8 61.8 L200.3 66.3 L202.6 70.9 L204.6 75.8 L206.4 80.8 L208.0 86.0 L208.5 87.9 L208.9 89.8 L209.3 91.8 L209.6 93.7 L209.9 95.6 L210.2 97.5 L210.4 99.5 L210.6 101.4 L210.8 103.4 L210.9 105.3 L211.0 107.3 L211.0 109.3 L211.0 111.2 L211.0 113.2 L210.9 115.2 L210.8 117.2 L210.6 119.3 L210.4 121.3 L210.2 123.4 L209.9 125.4 L209.6 127.5 L209.3 129.6 L208.9 131.7 L208.5 133.8 L208.0 136.0" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none"/></mask>
+              <mask id="arrow-head-mask" maskUnits="userSpaceOnUse"><path class="hand-arrow__draw-head" d="M185 114 L208.5 139 L227 106" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></mask>
+            </defs>
+            <path d="M15.1 58.8 L17.4 55.4 L20.2 52.4 L22.8 49.2 L25.8 46.4 L28.8 43.6 L31.8 40.7 L35.2 38.2 L38.5 35.5 L42.1 33.3 L45.7 30.9 L49.4 28.8 L53.4 27.0 L57.5 25.6 L61.5 23.7 L65.7 22.1 L70.0 21.0 L74.5 20.2 L78.9 19.2 L83.4 18.2 L88.0 17.9 L92.6 16.9 L97.3 16.8 L102.1 16.4 L107.0 16.1 L111.9 16.0 L117.3 16.3 L122.6 17.3 L127.8 17.9 L132.9 19.0 L137.9 20.4 L142.8 21.8 L147.5 23.5 L152.3 25.1 L156.9 26.9 L161.3 29.1 L165.4 31.9 L169.5 34.6 L173.5 37.4 L177.2 40.6 L180.7 43.8 L184.3 47.2 L187.3 51.0 L190.2 54.9 L193.3 58.8 L195.9 63.0 L198.3 67.3 L200.3 72.0 L202.2 76.7 L204.3 81.5 L205.5 86.7 L206.4 88.4 L206.9 90.3 L207.1 92.2 L207.8 94.0 L208.1 95.9 L208.8 97.7 L208.8 99.7 L208.8 101.6 L208.9 103.5 L208.8 105.4 L209.2 107.3 L209.1 109.3 L209.1 111.2 L209.2 113.2 L209.2 115.2 L208.9 117.1 L208.5 119.1 L208.5 121.1 L208.2 123.1 L208.4 125.2 L208.0 127.2 L207.6 129.3 L206.9 131.3 L206.3 133.4 L206.2 135.6 L209.5 136.3 L210.0 134.2 L210.5 132.0 L210.8 129.9 L211.1 127.7 L211.4 125.6 L211.8 123.5 L212.0 121.5 L212.2 119.4 L212.3 117.3 L212.4 115.3 L212.6 113.3 L212.6 111.3 L212.7 109.2 L212.7 107.2 L212.7 105.2 L212.5 103.3 L212.4 101.3 L212.2 99.3 L212.0 97.3 L211.8 95.3 L211.5 93.4 L211.3 91.4 L210.9 89.4 L210.5 87.5 L210.1 85.4 L208.5 80.1 L206.7 75.0 L204.7 70.0 L202.3 65.2 L199.8 60.6 L197.0 56.2 L194.1 52.0 L190.9 48.0 L187.5 44.2 L183.9 40.5 L180.2 37.1 L176.2 33.9 L172.1 30.8 L167.8 28.0 L163.4 25.5 L158.8 23.1 L154.1 20.8 L149.2 18.8 L144.3 17.1 L139.2 15.6 L133.9 14.4 L128.6 13.3 L123.2 12.5 L117.7 12.0 L112.1 11.6 L107.0 11.4 L102.0 11.4 L97.0 11.7 L92.1 12.1 L87.3 12.7 L82.5 13.5 L77.8 14.5 L73.3 15.7 L68.8 17.0 L64.4 18.5 L60.1 20.2 L55.9 21.9 L51.9 23.9 L47.9 26.0 L44.1 28.2 L40.3 30.5 L36.7 33.0 L33.2 35.6 L29.9 38.4 L26.7 41.2 L23.6 44.2 L20.7 47.3 L17.9 50.4 L15.3 53.8 L12.8 57.1 Z" fill="currentColor" mask="url(#arrow-line-mask)"/>
+            <path d="M184.2 114.8 L206.6 140.8 L210.4 137.2 L185.8 113.2 Z M210.8 140.3 L227.9 106.5 L226.1 105.5 L206.2 137.7 Z" fill="currentColor" mask="url(#arrow-head-mask)"/>
+          </svg>
+          <svg class="hand-arrow hand-arrow--mobile reveal" viewBox="0 0 64 92" fill="none" aria-hidden="true">
+            <defs>
+              <mask id="arrow-m-line-mask" maskUnits="userSpaceOnUse"><path class="hand-arrow__draw" d="M34.0 6.0 L34.4 7.8 L34.8 9.6 L35.0 11.4 L35.2 13.2 L35.4 15.0 L35.5 16.8 L35.5 18.6 L35.5 20.4 L35.5 22.2 L35.4 24.1 L35.2 25.9 L35.1 27.7 L34.9 29.5 L34.6 31.4 L34.4 33.2 L34.1 35.1 L33.8 36.9 L33.5 38.8 L33.2 40.6 L32.9 42.5 L32.6 44.4 L32.2 46.3 L31.9 48.2 L31.6 50.1 L31.3 52.0 L31.1 53.9 L30.8 55.8 L30.6 57.8 L30.4 59.7 L30.2 61.7 L30.1 63.7 L30.0 65.6 L29.9 67.6 L29.9 69.7 L29.9 71.7 L30.0 73.7 L30.2 75.8 L30.4 77.8 L30.7 79.9 L31.0 82.0" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none"/></mask>
+              <mask id="arrow-m-head-mask" maskUnits="userSpaceOnUse"><path class="hand-arrow__draw-head" d="M17 68 L31.5 85 L47 70" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/></mask>
+            </defs>
+            <path d="M32.7 6.3 L32.9 8.1 L32.9 9.9 L33.2 11.6 L33.4 13.4 L33.4 15.1 L33.7 16.9 L33.6 18.6 L33.4 20.4 L33.1 22.1 L33.3 23.9 L33.2 25.7 L33.2 27.5 L32.7 29.3 L32.3 31.1 L32.3 32.9 L31.6 34.7 L31.1 36.5 L30.8 38.3 L30.6 40.2 L30.6 42.1 L30.6 44.0 L30.2 45.9 L30.1 47.9 L29.9 49.8 L29.7 51.7 L29.6 53.7 L29.3 55.6 L29.0 57.6 L28.5 59.5 L28.4 61.5 L28.2 63.6 L28.2 65.6 L28.1 67.6 L28.3 69.7 L28.5 71.7 L28.4 73.8 L28.3 75.9 L28.4 78.1 L28.8 80.2 L29.4 82.3 L32.4 81.8 L32.2 79.7 L31.9 77.7 L31.7 75.6 L31.5 73.6 L31.4 71.6 L31.5 69.6 L31.6 67.7 L31.7 65.7 L31.9 63.8 L32.0 61.8 L32.3 59.9 L32.4 58.0 L32.7 56.1 L33.0 54.2 L33.3 52.3 L33.7 50.4 L34.0 48.5 L34.4 46.6 L34.7 44.7 L35.2 42.9 L35.6 41.0 L35.9 39.2 L36.2 37.3 L36.5 35.4 L36.6 33.5 L36.9 31.7 L37.1 29.8 L37.2 27.9 L37.4 26.1 L37.5 24.2 L37.6 22.3 L37.6 20.5 L37.5 18.6 L37.4 16.7 L37.3 14.9 L37.0 13.0 L36.7 11.2 L36.4 9.3 L35.9 7.5 L35.4 5.7 Z" fill="currentColor" mask="url(#arrow-m-line-mask)"/>
+            <path d="M16.2 68.7 L29.6 86.6 L33.4 83.4 L17.8 67.3 Z M33.2 86.8 L47.7 70.7 L46.3 69.3 L29.8 83.2 Z" fill="currentColor" mask="url(#arrow-m-head-mask)"/>
+          </svg>
+          <div style="position:absolute;width:48%;right:0;top:180px" class="frame" data-speed="0.25">
+            <img src="../assets/img/agentic/after.jpg" alt="After: the Agentic Onboarding entry asking for a company name or website" loading="lazy">
+          </div>
+        </div>
+        <p class="frame-caption ba-caption">Before: live pipedrive.com signup &nbsp;→&nbsp; After: Agentic Onboarding entry</p>
+      </div>
+    </section>
+
+    <!-- Context + test design -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">03</span>
+      <div class="container">
+        <span class="eyebrow reveal">Context</span>
+        <h2 class="reveal">Framed as a fast, testable bet</h2>
+        <div class="cards" style="--cols:4">
+          <div class="card reveal"><span class="num">FORMAT</span><p>Shipped as an A/B test, not a full re‑platform, and designed to be reversible.</p></div>
+          <div class="card reveal reveal-delay-1"><span class="num">NORTH STAR</span><p>Movement in trial‑to‑paid (T2P) conversion.</p></div>
+          <div class="card reveal reveal-delay-2"><span class="num">APPROACH</span><p>Kicked off with a focused sprint. I drafted the end‑to‑end experience for engineering to build against.</p></div>
+          <div class="card reveal reveal-delay-3"><span class="num">OPEN QUESTION</span><p>Does proving value before signup change who converts, and how many?</p></div>
+        </div>
+
+        <div class="split" style="margin-top:120px">
+          <div class="reveal">
+            <span class="eyebrow">Test design</span>
+            <h2>Who saw it</h2>
+            <p>A share of new visitors starting a free trial was enrolled. Half of them saw the new Setup Agent flow, the other half the current signup. Mobile and other languages weren't included.</p>
+          </div>
+          <div class="testdesign reveal reveal-delay-1">
+            <div class="stat testdesign__main"><strong>30<span class="pct">%</span></strong><span>of eligible traffic enrolled in the experiment</span></div>
+            <div class="testdesign__split" aria-label="Of the enrolled traffic">
+              <div class="testdesign__bar"><span class="testdesign__treat" style="width:50%"></span></div>
+              <div class="testdesign__legend">
+                <span><i class="testdesign__dot testdesign__dot--treat"></i><strong>15%</strong> treatment, saw the new flow</span>
+                <span><i class="testdesign__dot"></i><strong>15%</strong> control, saw the current signup</span>
+              </div>
+            </div>
+            <ul class="testdesign__limits" aria-label="Eligibility">
+              <li>New visitors only</li>
+              <li>“Try it free” on web</li>
+              <li>English (EN) locale</li>
+              <li>Desktop only</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scope -->
+    <section class="chapter chapter--dark">
+      <span class="ghost" data-speed="-0.2" aria-hidden="true" style="color:#fff">04</span>
+      <div class="container">
+        <span class="eyebrow reveal">Scope &amp; limits</span>
+        <h2 class="reveal">Where the experiment starts and stops</h2>
+        <p class="lead reveal" style="max-width:62ch">The scope ends when the user submits the “About you” form. A real session is created and the browser redirects into live Pipedrive. Everything after that is the standard product, not this experiment.</p>
+        <div class="cards" style="--cols:4">
+          <div class="card reveal"><h3>Desktop only</h3><p>No support yet for visitors signing up from a mobile browser.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>3 attempts</h3><p>After 3 tries at entering a company name or domain, the flow falls back to a generic pipeline.</p></div>
+          <div class="card reveal reveal-delay-2"><h3>15 attempts</h3><p>Editing and rebuilding the sales process is capped at 15 tries.</p></div>
+          <div class="card reveal reveal-delay-3"><h3>Limited sample data</h3><p>Opening, editing and deleting sample deals is limited to what the walkthrough covers.</p></div>
+        </div>
+        <p class="muted reveal" style="margin-top:40px">No CRM import in this experiment. Testing suggested it was premature here, so it's being validated in a separate experiment.</p>
+      </div>
+    </section>
+
+    <!-- Hypothesis -->
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">05</span>
+      <div class="container">
+        <span class="eyebrow reveal">Hypothesis</span>
+        <h2 class="reveal">Let people build something real before they commit</h2>
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <blockquote class="quote quote--body reveal" style="max-width:40ch">Guiding new users to personalise their pipeline and learn how to add a deal, move a deal and add an activity, while reducing the overwhelm of multiple inputs during signup, will lead to a magical first onboarding experience that helps them get started on Pipedrive.</blockquote>
+        <div class="cards" style="--cols:3">
+          <div class="card reveal"><h3>Personal, not generic</h3><p>The pipeline reflects their company, not a demo dataset.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>Editable early</h3><p>Every draft (industry, process, stages) can be corrected before moving on.</p></div>
+          <div class="card reveal reveal-delay-2"><h3>Signup deferred</h3><p>Signup comes at the moment of ownership, not the moment of curiosity.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">06</span>
+      <div class="container">
+        <span class="eyebrow reveal">Design principles</span>
+        <h2 class="reveal">What the experience should always feel like</h2>
+        <div class="cards" style="--cols:4">
+          <div class="card reveal"><h3>Positive momentum</h3><p>Create positive emotional momentum from the very first interaction.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>Fast &amp; effortless</h3><p>Make the experience feel fast, simple, and effortless.</p></div>
+          <div class="card reveal reveal-delay-2"><h3>Value, fast</h3><p>Deliver real value as quickly as possible.</p></div>
+          <div class="card reveal reveal-delay-3"><h3>Trust like a bank account</h3><p>Every interaction should add confidence, clarity and credibility, never take it away.</p></div>
+          <div class="card reveal"><h3>Personal &amp; adaptable</h3><p>Help customers shape the product around how they work, so it feels like their own.</p></div>
+          <div class="card reveal reveal-delay-1"><h3>Never one‑and‑done</h3><p>Onboarding stays available, helping customers discover, improve and expand as new features launch.</p></div>
+          <div class="card reveal reveal-delay-2"><h3>Visual continuity</h3><p>One coherent visual language, start to finish.</p></div>
+          <div class="card reveal reveal-delay-3"><h3>Feel magical</h3><p>The experience should feel like more than the sum of its parts.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key decision -->
+    <section class="chapter chapter--soft">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">07</span>
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <span class="eyebrow">A key decision</span>
+            <h2>Why company name, not email, opens the flow</h2>
+            <p>Email was the obvious default, since it's the standard SaaS signup pattern. We chose company name or website instead, after weighing both against who we're actually building for.</p>
+          </div>
+          <div class="stat reveal reveal-delay-1">
+            <strong style="font-size:clamp(96px,14vw,180px)">35<span class="pct">%</span></strong>
+            <span style="max-width:36ch">of visitors in the current live signup use a public email address (Gmail, Yahoo, etc.), not a company domain the AI could use to identify their business.</span>
+          </div>
+        </div>
+        <div class="compare">
+          <div class="card card--dim reveal">
+            <h4>Email: considered, not chosen</h4>
+            <ul class="ticks">
+              <li>Doesn't reliably map to a company. Many of our smaller target customers sign up with personal addresses.</li>
+              <li>Needs verification before it's usable, which adds a step and a wait</li>
+              <li>Slower to type than a short company name</li>
+            </ul>
+          </div>
+          <div class="card card--chosen reveal reveal-delay-1">
+            <h4>Company name / website: chosen</h4>
+            <ul class="ticks">
+              <li>Works for our actual target customers: smaller companies, not just ones with clean corporate domains</li>
+              <li>Feeds the AI directly. It's exactly what the Setup Agent needs to identify the business and draft a sales process.</li>
+              <li>Quick to type with no verification, so a result appears right away</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">08</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Grounded in the market</span>
+          <h2>We benchmarked how others handle the first five minutes</h2>
+          <p>Before designing the flow, we looked at how direct CRM competitors and adjacent workflow tools handle the first five minutes: what they ask for, what they show before signup, and where they make people wait.</p>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="cards" style="--cols:2;margin-top:0">
+            <div class="card"><h3>Attio</h3><p>Direct competitor</p></div>
+            <div class="card"><h3>HubSpot</h3><p>Direct competitor</p></div>
+            <div class="card"><h3>Salesforce</h3><p>Direct competitor</p></div>
+            <div class="card"><h3>Airtable</h3><p>Adjacent, a flexible workspace tool</p></div>
+          </div>
+          <p class="callout"><strong>Why this matters:</strong> the scan shaped what “fast and simple” needed to mean here. It also confirmed that an AI‑personalised first step before signup wasn't yet common among direct competitors.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- New flow -->
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">09</span>
+      <div class="container">
+        <div>
+          <div class="reveal">
+            <span class="eyebrow">The new flow</span>
+            <h2 style="max-width:24ch">From a company name to a working pipeline in five steps</h2>
+          </div>
+          <p class="lead reveal reveal-delay-1" style="max-width:62ch">Instead of signing up first and then being guided through an empty product, the visitor shares one thing: their company. The Setup Agent does the setup work, the visitor learns by doing on their own pipeline, and the account comes last.</p>
+        </div>
+        <ol class="flow flow--rich" style="padding:0">
+          <li class="reveal"><strong>Share company</strong><span>The visitor types a company name or website. No account, email or password is needed to start.</span></li>
+          <li class="reveal reveal-delay-1"><strong>Confirm &amp; refine</strong><span>The Setup Agent identifies the business, proposes an industry and drafts a sales process in plain language. Every part can be edited before anything is built.</span></li>
+          <li class="reveal reveal-delay-2"><strong>Pipeline is built</strong><span>Each approved stage becomes a pipeline column, filled with sample deals so the board never looks empty on day one.</span></li>
+          <li class="reveal reveal-delay-3"><strong>Try core actions</strong><span>Instead of a feature tour, three real tasks on the sample data: add a deal, move it forward and add an activity. It's the core loop every Pipedrive user repeats daily.</span></li>
+          <li class="reveal"><strong>Create account</strong><span>Only after the tour does the agent ask for an account, framed as keeping the pipeline they just built rather than starting something new.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Live prototype -->
+    <section class="chapter proto">
+      <div class="container">
+        <div class="proto__head">
+          <div class="reveal">
+            <span class="eyebrow">Try it yourself</span>
+            <h2>Play with the prototype</h2>
+          </div>
+          <p class="reveal reveal-delay-1">Enter a company name or website and the Setup Agent drafts a sales process and builds a pipeline. It's a desktop prototype, so it works best on a larger screen.</p>
+        </div>
+        <div class="proto__window reveal">
+          <div class="proto__bar" aria-hidden="true">
+            <span class="proto__dots"><i></i><i></i><i></i></span>
+            <span class="proto__url">margit-agentic-onboarding.lovable.app</span>
+          </div>
+          <div class="proto__frame">
+            <iframe src="https://margit-agentic-onboarding.lovable.app" title="Agentic onboarding prototype" loading="lazy" referrerpolicy="no-referrer" allow="clipboard-write"></iframe>
+          </div>
+          <img class="proto__fallback" src="../assets/img/agentic/setup-agent-cover.webp" alt="Setup agent entry screen of the prototype" loading="lazy">
+        </div>
+        <a class="btn proto__open" href="https://margit-agentic-onboarding.lovable.app" target="_blank" rel="noopener noreferrer">Open prototype in a new tab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+      </div>
+    </section>
+
+    <!-- Decisions -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">10</span>
+      <div class="container">
+        <span class="eyebrow reveal">Design decisions</span>
+        <h2 class="reveal">Choices worth calling out</h2>
+        <div class="cards" style="--cols:2">
+          <div class="card reveal"><span class="num">01</span><h3>Personalised over generic</h3><p>The pipeline reflects the user's real company and industry rather than a canned demo. Recognising their own business sells the value better than imagining it.</p></div>
+          <div class="card reveal reveal-delay-1"><span class="num">02</span><h3>Reversible at every step</h3><p>Company, industry and process can each be reopened and edited again without losing later progress. Here, trust matters more than speed.</p></div>
+          <div class="card reveal"><span class="num">03</span><h3>Learn by doing, not reading</h3><p>The tour replaces a feature checklist with three real actions on the user's own data, the same loop they'll repeat every day after.</p></div>
+          <div class="card reveal reveal-delay-1"><span class="num">04</span><h3>Ask to keep, not to start</h3><p>Framing signup as “save your work” turns loss aversion into motivation, instead of asking for blind trust up front.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where we are -->
+    <section class="chapter chapter--dark">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true" style="color:#fff">11</span>
+      <div class="container">
+        <span class="eyebrow reveal">Where we are</span>
+        <h2 class="reveal">First results are in</h2>
+        <p class="lead reveal" style="max-width:62ch">The first run didn't move the north star yet, but it confirmed the core idea: people who reach the Setup Agent build a pipeline and come back. The challenge is getting more visitors to that moment, which is what the re‑run tackles.</p>
+        <div class="northstar reveal">
+          <span class="northstar__label">North star · Trial‑to‑paid (T2P)</span>
+          <p class="northstar__result">No significant change in the first run</p>
+          <p class="northstar__why">The likely reason is reach: most visitors skipped before engaging with the Setup Agent, so too few experienced the new flow to move T2P. The re‑run targets exactly that, while the leading indicators below show the flow works for those who use it.</p>
+        </div>
+        <div class="cards results" style="--cols:3">
+          <div class="card result reveal">
+            <h3 class="result__title">What's working</h3>
+            <div class="result__item"><h4>Sales process draft and pipeline generation are working</h4><p><strong>66%</strong> of visitors who entered a company name generated a pipeline, compared with <strong>34%</strong> in past experiments.</p></div>
+            <div class="result__item"><h4>Retention is the strongest signal so far</h4><p>Day‑1 retention is <strong>52.9%</strong> for people who generated a pipeline, compared with <strong>39.5%</strong> for those who didn't.</p></div>
+          </div>
+          <div class="card result reveal reveal-delay-1">
+            <h3 class="result__title">What's not working</h3>
+            <div class="result__item"><h4>Skipping and creating an account</h4><p>Most visitors never experience the agent's differentiating value. <strong>43%</strong> click “Skip to create account”, and <strong>56%</strong> of all skips happen before users engage with the Setup Agent.</p></div>
+            <div class="result__item"><h4>Gathering company context from a name or domain</h4><p><strong>48.4%</strong> of users who entered their name or domain either got no results from the LLM or said “no, wrong company”, and eventually picked an industry from our list.</p></div>
+            <div class="result__item"><h4>UX issues</h4><ul><li>There's no upfront framing of what a “pipeline” or “stage” is. CRM literacy can't be assumed.</li><li>The activities walkthrough is introduced abruptly, right after the pipeline and deal setup.</li></ul></div>
+          </div>
+          <div class="card result reveal reveal-delay-2">
+            <h3 class="result__title">What's next: re‑run</h3>
+            <div class="result__item"><h4>Better framing when landing on the Setup Agent</h4><ul><li>Set the expectation that generating a pipeline is the first step to creating an account.</li><li>The Setup Agent asks about your business, customers and products or services to shape the sales process draft.</li></ul></div>
+            <div class="result__item"><h4>UX changes that set the right expectations</h4><ul><li>Centre the Setup Agent to keep it in focus.</li><li>Change “Skip and create account” to “I'll do this later”.</li><li>Remove the “Activities” walkthrough step to keep the focus on the Setup Agent.</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testing -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">12</span>
+      <div class="container">
+        <span class="eyebrow reveal">Usability testing</span>
+        <h2 class="reveal">What testing told us</h2>
+        <div class="signals-group">
+          <h3 class="signals-group__title signals-group__title--pos reveal">Positive signals</h3>
+          <div class="signals-list">
+            <div class="card signal signal--pos reveal">
+              <h3>“I hate starting with a blank page.”</h3>
+              <p>The AI‑drafted first version relieved blank‑page anxiety, which validated the core premise: the agent drafts first, not the user.</p>
+            </div>
+            <div class="card signal signal--pos reveal">
+              <h3>They connected the dots</h3>
+              <p>Participants recognised that stage names and descriptions came from their company's domain, so the personalisation read as intentional, not random.</p>
+            </div>
+          </div>
+        </div>
+        <div class="signals-group">
+          <h3 class="signals-group__title signals-group__title--neg reveal">Negative signals</h3>
+          <div class="signals-list">
+            <div class="card signal signal--neg reveal">
+              <h3>“A pipeline alone doesn't sell me.”</h3>
+              <p>More experienced users wanted to see Pipedrive's broader capabilities, not just deal tracking. That's the signal behind the integrations idea in next steps.</p>
+            </div>
+            <div class="card signal signal--neg reveal">
+              <h3>Clarified the “Build” copy</h3>
+              <p>Only 3 of 5 participants correctly guessed that the button would build their pipeline. The call to action wasn't clear enough.</p>
+            </div>
+            <div class="card signal signal--neg reveal">
+              <h3>Deprioritised “show me another”</h3>
+              <p>Only 1 of 5 participants was interested in generating a new version, too few to prioritise it over direct editing.</p>
+            </div>
+            <div class="card signal signal--neg reveal">
+              <h3>Removed the colourful activity icons</h3>
+              <p>Icons on deal cards drew attention and confused people. We removed them before introducing activities and now show the correct state for a new activity directly.</p>
+            </div>
+            <div class="card signal signal--neg reveal">
+              <h3>Moved import out of scope</h3>
+              <p>Participants said they'd import only after deciding to pay, and import needs real engineering investment. It's now a separate, focused experiment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learnings -->
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">13</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Early learnings</span>
+          <h2>What building this has already taught us</h2>
+          <ul class="ticks">
+            <li>Editability at every step turned out to be as important as the AI draft itself. Users needed an easy way back, not just forward.</li>
+            <li>Filling the board with sample deals right away, instead of showing an empty state, helped the pipeline concept click faster in review.</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Open questions</span>
+          <div class="cards" style="--cols:1;margin-top:24px">
+            <div class="card"><p>How much personalisation is enough before it starts to feel like effort instead of magic?</p></div>
+            <div class="card"><p>Does deferring signup change <em>who</em> converts (better‑fit users), or just <em>when</em> they convert?</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next steps -->
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">14</span>
+      <div class="container">
+        <span class="eyebrow reveal">Next steps</span>
+        <h2 class="reveal">After the first run</h2>
+        <div class="cards" style="--cols:4">
+          <div class="card reveal"><span class="num">01</span><h3>Re‑run with better framing</h3><p>V2 re‑runs with minimal changes to the “skip” button. V3 is a full re‑run with clearer framing on the Setup Agent and UX changes that set the right expectations, aiming to get more visitors to generate a pipeline.</p></div>
+          <div class="card reveal reveal-delay-1"><span class="num">02</span><h3>Integrations &amp; automations</h3><p>Use signals from the sales‑process description to suggest connecting email, WhatsApp, calendar or other tools, and automating follow‑ups.</p></div>
+          <div class="card reveal reveal-delay-2"><span class="num">03</span><h3>Import as a suggestion</h3><p>Offer manual import once value is proven and watch traction before investing more, informed by a parallel import experiment.</p></div>
+          <div class="card reveal reveal-delay-3"><span class="num">04</span><h3>Localise beyond EN</h3><p>Bring the agent's UX content to other languages once the re‑runs validate the English flow.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container next__row">
+        <a class="btn btn--ghost next__back" href="../#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back to portfolio
+        </a>
+        <a class="next__link" href="customisable-navigation.html">
+          <span class="eyebrow">Next case study</span>
+          <h2>Pipedrive customisable navigation</h2>
+          <span class="btn next__cta">Read next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="../assets/js/main.js?v=20261107a"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boat monitoring and alarming system — Margit Urva</title>
+  <meta name="description" content="Case study: redesigning a boat monitoring and alarming interface.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261107a">
+  <script>try{var m=localStorage.getItem("reduce-motion");if(m==="1"||(m===null&&matchMedia("(prefers-reduced-motion: reduce)").matches))document.documentElement.classList.add("reduce-motion")}catch(e){}</script>
+</head>
+<body class="theme-boat">
+  <div class="progress" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a href="../#work">Case studies</a>
+        <a href="../resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cs-hero cs-hero--bleed">
+      <!-- Layered "sea" -->
+      <svg class="shape" style="left:0;bottom:-40px;width:100%;height:260px" viewBox="0 0 1440 260" preserveAspectRatio="none" data-speed="-0.1" aria-hidden="true"><path d="M0 120 C 240 60 480 180 720 120 S 1200 60 1440 120 V260 H0Z" style="fill:var(--wave-a)"/></svg>
+      <svg class="shape" style="left:0;bottom:-60px;width:100%;height:220px" viewBox="0 0 1440 220" preserveAspectRatio="none" data-speed="-0.25" aria-hidden="true"><path d="M0 100 C 300 160 600 40 900 100 S 1300 160 1440 90 V220 H0Z" style="fill:var(--wave-b)"/></svg>
+      <div class="container cs-hero__inner">
+        <div>
+          <span class="eyebrow reveal">Case study · UX/UI design</span>
+          <h1 class="reveal reveal-delay-1">Boat monitoring and alarming system</h1>
+          <p class="cs-hero__sub reveal reveal-delay-2">Modernising a technical interface for captains and mechanics.</p>
+        </div>
+        <div class="cs-hero__visual" data-speed="0.06">
+          <img class="reveal reveal-delay-1" src="../assets/img/boat/tanks.webp" alt="The redesigned monitoring system's Tanks view, showing bilge pumps along the hull on a console display" style="box-shadow:none;border-radius:0">
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
+
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">01</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Problem statement</span>
+          <h2>Outdated, unintuitive and hard to learn</h2>
+          <p class="lead">Boat monitoring and alarming systems are outdated. The solutions on the market are unintuitive and hard to learn.</p>
+          <p>Modernising them and creating a great user experience would be a strong selling point. That's why the client, a boat manufacturer, reached out to a design agency.</p>
+        </div>
+        <div style="position:relative;min-height:480px">
+          <div style="position:absolute;right:0;top:0;width:66%" data-speed="0.06">
+            <p class="frame-caption" style="margin:0 0 12px">Old interface</p>
+            <img class="reveal" src="../assets/img/boat/old-photo.webp" alt="Photo of the old monitoring screen on board" loading="lazy">
+          </div>
+          <div style="position:absolute;left:-3.4%;top:212px;width:83.8%" data-speed="0.22">
+            <img class="reveal reveal-delay-1" src="../assets/img/boat/old-interface.webp" alt="Switches view of the monitoring system with pump and cooling controls" loading="lazy" style="filter:drop-shadow(0 24px 32px rgba(46, 40, 34, 0.3))">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--accent">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">02</span>
+      <div class="container split" style="align-items:start">
+        <div class="reveal">
+          <span class="eyebrow">Goals</span>
+          <h2>What the update needed to achieve</h2>
+          <ul class="ticks">
+            <li>Improve communication between machine and human</li>
+            <li>Simple usability for all user groups</li>
+            <li>Improved, simpler iconography</li>
+            <li>A modernised interface that increases sales</li>
+            <li>A shorter learning curve for the workforce</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Team</span>
+          <p style="margin-top:16px">I was the project's designer, and a project manager led the collaboration with the client. Development was done in‑house.</p>
+          <div class="card" style="margin-top:32px" data-speed="0.08">
+            <h3>Client workshop</h3>
+            <p>We ran a workshop with the client to work out:</p>
+            <ul class="ticks" style="font-size:16px">
+              <li>working process and collaboration</li>
+              <li>the system's target group</li>
+              <li>the functionality to cover</li>
+              <li>industry standards and special solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">03</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Methods</span>
+          <h2>Going to where the work happens</h2>
+          <p>We started with several qualitative research methods. First, a field study observed users interacting with the interface in their working environment. We also interviewed users and based our personas on the findings. Our target users were captains and mechanics.</p>
+          <p>Next, we took the UI apart. We wrote user stories and ran card sorting with the target group to work out the information architecture.</p>
+        </div>
+        <div class="anchor-bottom-stage" style="position:relative;min-height:620px">
+          <div style="position:absolute;left:0;top:0;width:52%" data-speed="0.06">
+            <img class="reveal" src="../assets/img/boat/field-study.webp" alt="Field study: a user operating the on-board panel" loading="lazy">
+          </div>
+          <!-- The personas image is cropped at its bottom edge, so it sits flush with the section's bottom -->
+          <div class="anchor-bottom" style="position:absolute;right:-4%;width:72%">
+            <img class="reveal reveal-delay-1" src="../assets/img/boat/personas.webp" alt="User personas for a captain and a mechanic" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--soft">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true">04</span>
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <span class="eyebrow">Building the new interface</span>
+            <h2>Raising fidelity as the IA settled</h2>
+          </div>
+          <p class="reveal reveal-delay-1">After the discovery phase it was time to build the first prototypes. I ran several rounds of usability testing, improved the interface after each one, and raised the fidelity as the information architecture became more stable.</p>
+        </div>
+        <div style="margin-top:72px" data-speed="0.06">
+          <img class="reveal" src="../assets/img/boat/iterations.webp" alt="Propulsion view prototypes across testing rounds" loading="lazy" style="width:100%">
+          <p class="frame-caption">Prototype iterations of the propulsion view</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">05</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">Inspiration</span>
+          <h2>Learning from the state of the art</h2>
+          <p>To build a market‑leading product, competitive research was essential. It showed us industry standards and the state of the art, which helped us improve the IA, copy and iconography.</p>
+        </div>
+        <div data-speed="0.14" style="max-width:240px;margin:0 auto">
+          <img class="reveal reveal-delay-1" src="../assets/img/boat/switch-icons.webp" alt="Switch and toggle icon states: on, off, warning and local control" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter--dark" style="background:var(--dark)">
+      <span class="ghost ghost--left" data-speed="-0.2" aria-hidden="true" style="color:#fff">06</span>
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Handover</span>
+          <h2>Designing for a unique platform</h2>
+          <p class="muted">The platform was unique and didn't support effects like shadows, so the handover included a prototype, design specs and SVG assets. We also wrote design guidelines for certain behaviours.</p>
+          <p class="muted">The product was localised, so the font had to support every character. Readability needed extra care, so the font also had to have easily distinguishable characters.</p>
+        </div>
+        <div data-speed="0.12" style="max-width:420px;margin:0 auto;width:100%">
+          <img class="reveal reveal-delay-1" src="../assets/img/boat/litre-glyph.svg" alt="Litres abbreviation readability: a lowercase l compared with a distinguishable l" loading="lazy" style="width:100%">
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter">
+      <span class="ghost" data-speed="-0.25" aria-hidden="true">07</span>
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <span class="eyebrow">Learnings</span>
+          <h2>A big step forward, built on collaboration</h2>
+          <p>The subject was very specific and technical, so the project needed a lot of collaboration. It was hard to find people from the target group to test with and interview.</p>
+          <p>It was also hard to find time for collaboration and design QA with the boat manufacturer, who was busy launching a new boat. More frequent communication would have helped, but the delivered product was still a big step forward for the industry.</p>
+        </div>
+        <div data-speed="0.1" style="max-width:460px;width:100%;margin:0 auto">
+          <div class="frame reveal reveal-delay-1"><img src="../assets/img/boat/on-board.webp" alt="The new interface installed in a boat's control panel" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" style="background:var(--dark);color:#fff">
+      <div class="container">
+        <span class="eyebrow" style="color:var(--accent)">Appendix</span>
+        <h2 style="font-size:clamp(40px,5.2vw,72px);font-weight:400;margin:14px 0 0">The new interface</h2>
+        <div class="band__stage" style="margin-top:56px;min-height:560px">
+          <div style="position:absolute;left:-2%;top:0;width:54%" data-speed="0.06">
+            <img src="../assets/img/boat/propulsion-scheme.webp" alt="Propulsion scheme view of the electrical system" loading="lazy">
+          </div>
+          <div style="position:absolute;right:-2%;top:150px;width:54%" data-speed="0.22">
+            <img src="../assets/img/boat/propulsion-engine.webp" alt="Portside main and auxiliary engine view" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next">
+      <div class="container next__row">
+        <a class="btn btn--ghost next__back" href="../#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 5l-7 7 7 7"/></svg>
+          Back to portfolio
+        </a>
+        <a class="next__link" href="agentic-onboarding.html">
+          <span class="eyebrow">Next case study</span>
+          <h2>Agentic Onboarding</h2>
+          <span class="btn next__cta">Read next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="../assets/js/main.js?v=20261107a"></script>
+</body>
+</html>
